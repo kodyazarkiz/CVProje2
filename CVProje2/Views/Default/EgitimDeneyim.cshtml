@@ -1,0 +1,84 @@
+﻿@using CVProje2.Models.entity
+@model List<TblEğitimDeneyim>
+<section class="ms-experience-section ms-slide padding-tb-80 body-bg">
+    <div class="container">
+        @foreach (var x in Model)
+        {
+            <div class="row">
+                <div class="section-title">
+                    <h2>Akademik Hayatım <span>- Deneyimlerim</span></h2>
+                    <span class="ligh-title">Akademik Deneyim</span>
+                </div>
+
+                <div class="col-lg-6 col-md-12 col-sm-12">
+                    <div class="education">
+                        <h4>Eğitim Hayatım</h4>
+                        <ul class="timeline">
+                            <li class="timeline-item">
+                                <div class="timeline-block">
+                                    <div class="timeline-info">
+                                        <span>@x.ETarih</span>
+                                    </div>
+                                    <div class="timeline-marker"></div>
+                                    <div class="timeline-content">
+                                        <h5 class="timeline-title">@x.EBaslik <span class="sub">- GNO: @x.GNO</span></h5>
+                                        <p>@x.EAciklama</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <div class="timeline-period-end"></div>
+                        </ul>
+
+                    </div>
+                </div>
+
+
+                <div class="col-lg-6 col-md-12 col-sm-12">
+                    <div class="experiense">
+                        <h4>Deneyimlerim</h4>
+                        <ul class="timeline">
+                            <li class="timeline-item">
+                                <div class="timeline-block">
+                                    <div class="timeline-info">
+                                        <span>@x.DTarih</span>
+                                    </div>
+                                    <div class="timeline-marker"></div>
+                                    <div class="timeline-content">
+                                        <h5 class="timeline-title">@x.DBaslik<span class="sub">- @x.Pozisyon</span></h5>
+                                        <p>@x.DAciklama</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <div class="timeline-period-end"></div>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        }
+
+        <div class="row p-t-80 m-tb-minus-12 space-2 achive" id="counter">
+            @foreach (var x in Model)
+            {
+                <div class="col-lg-4 col-md-6 col-6 p-tp-12">
+                    <div class="count_block" data-tilt>
+                        <h3><span class="counter counter-value" data-count="459">@x.ProjeSayısı</span>+</h3>
+                        <p>Projelerim</p>
+                    </div>
+                </div>
+            }
+            <div class="col-lg-4 col-md-6 col-6 p-tp-12" data-tilt>
+                <div class="count_block">
+                    <h3 class="active-num"><span class="counter counter-value" data-count="56">10</span>+</h3>
+                    <p>Başarılar</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-6 p-tp-12" data-tilt>
+                <div class="count_block">
+                    <h3><span class="counter counter-value" data-count="15">15</span>+</h3>
+                    <p>Yazılım Dilleri</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+

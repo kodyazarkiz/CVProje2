@@ -1,0 +1,35 @@
+﻿@using CVProje2.Models.entity
+@model List<TblAnasayfa>
+
+<section class="ms-home ms-slide home-section body-bg">
+    <div class="container-fluid p-0">
+        <div class="ms-row">
+            @foreach (var x in Model)
+            {
+                <div class="col-lg-6 col-md-12 border-content">
+                    <div class="profile-img main-bg-black" id="particles-js">
+                        <div class="profile-detail">
+                            <img src="@x.Resim" alt="profile" data-tilt>
+                            @Html.Action("SosyalMedya")
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-12 border-content-color">
+                    <div class="ms-detail">
+
+                        <div class="info">
+                            <h1><span>@x.Ad  @x.Soyad</span></h1>
+                            <h2><span>-</span>@x.Baslik</h2>
+                            <p>@x.Aciklama</p>
+                            @*<a class="custom-btn ms-btn m-r-5px" href="@Url.Action("DownloadCVAsPDF", "Default")">CV İNDİR</a>*@
+                            @*<a href="@Url.Action("DownloadCVSite", "Home")" class="btn btn-primary">CV Sitemi İndir</a>*@
+                        </div>
+
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+    </div>
+</section>
+

@@ -1,0 +1,37 @@
+﻿@model CVProje2.Models.entity.TblBlog
+@{
+    ViewBag.Title = "BlogEkle";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<br />
+
+<h4 style="margin-left: 10px; margin-top: 10px; margin-bottom: 30px">Yeni Blog Ekleme Sayfası</h4>
+<br />
+<br />
+<div class="container-fluid">
+    <form method="post">
+        @Html.Label("Başlık")
+        @Html.TextBoxFor(x => x.Baslik, new { @class = "form-control" })
+        @Html.ValidationMessageFor(x => x.Baslik, "")
+        <br />
+        @Html.Label("Kategori")
+        @Html.TextBoxFor(x => x.Kategori, new { @class = "form-control" })
+        @Html.ValidationMessageFor(x => x.Kategori, "")
+        <br />
+        @Html.Label("Tarih")
+        @Html.TextBoxFor(x => x.Tarih, new { @class = "form-control" })
+        @Html.ValidationMessageFor(x => x.Tarih, "")
+        <br />
+        @Html.Label("Resim")
+        @Html.TextBoxFor(x => x.Resim, new { @class = "form-control" })
+        @Html.ValidationMessageFor(x => x.Resim, "")
+        <br />
+        @Html.Label("Açıklama")
+        @Html.TextBoxFor(x => x.Aciklama, new { @class = "form-control" })
+        @Html.ValidationMessageFor(x => x.Aciklama, "")
+        <br />
+        <button class="btn btn-outline-danger">Ekle</button>
+    </form>
+</div>
+

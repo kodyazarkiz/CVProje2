@@ -1,0 +1,86 @@
+﻿@using CVProje2.Models.entity
+@model List<Tbliletisim>
+<section class="ms-contact-section ms-slide padding-tb-80 body-bg">
+    <div class="container d-block">
+        <div class="section-title">
+            <h2>Bana Sormak İstediğiniz <span>Bir Şey Mi Var?</span></h2>
+            <span class="ligh-title">İletişim</span>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <img src="~/demo-1/assets/img/iletişimm.jpg" />
+            </div>
+            <div class="col-md-6">
+                <form>
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Ad Soyad" name="AdSoyad">
+                    </div>
+                    <div class="form-group">
+                        <input type="email" class="form-control" placeholder="E-Posta" name="Mail">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control"  placeholder="Konu" name="Konu">
+                    </div>
+                    <div class="form-group">
+                        <textarea class="form-control" rows="5" placeholder="Mesaj" name="Mesaj"></textarea>
+                    </div>
+                    <button type="submit" class="custom-btn ms-btn-1">Gönder</button>
+                </form>
+            </div>
+        </div>
+        @foreach (var x in Model)
+        {
+            <div class="row p-t-80 ms-contact-detail m-tb-minus-12">
+                <div class="col-xs-12 col-sm-6 col-lg-4 p-tp-12">
+                    <div class="ms-box">
+                        <div class="detail">
+                            <div class="icon"><i class="fa fa-envelope" aria-hidden="true"></i></div>
+                            <div class="info">
+                                <h3 class="title">E-Posta & Website</h3>
+                                <p>
+                                    <i class="fa fa-envelope" aria-hidden="true"></i> &nbsp @x.Mail
+                                </p>
+                                <p>
+                                    <i class="fa fa-globe" aria-hidden="true"></i> &nbsp @x.WebSite
+                                </p>
+                            </div>
+                        </div>
+                        <div class="space"></div>
+                    </div>
+                </div>
+
+                <div class="col-xs-12 col-sm-6 col-lg-4 p-tp-12">
+                    <div class="ms-box">
+                        <div class="detail">
+                            <div class="icon"><i class="fa fa-mobile" aria-hidden="true"></i></div>
+                            <div class="info">
+                                <h3 class="title">Telefon</h3>
+                                <p>
+                                    <i class="fa fa-mobile" aria-hidden="true"></i> &nbsp @x.Telefon
+                                </p>
+                            </div>
+                        </div>
+                        <div class="space"></div>
+                    </div>
+                </div>
+
+                <div class="col-xs-12 col-sm-6 col-lg-4 p-tp-12 m-auto">
+                    <div class="ms-box">
+                        <div class="detail">
+                            <div class="icon"><i class="fa fa-map-marker" aria-hidden="true"></i></div>
+                            <div class="info">
+                                <h3 class="title">Adres</h3>
+                                <p>
+                                    <i class="fa fa-map-marker" aria-hidden="true"></i> &nbsp @x.Adres
+                                </p>
+                            </div>
+                        </div>
+                        <div class="space"></div>
+                    </div>
+                </div>
+                <!-- /Boxes de Acoes -->
+            </div>
+        }
+    </div>
+</section>
+

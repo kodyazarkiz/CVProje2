@@ -1,0 +1,88 @@
+﻿@using CVProje2.Models.entity
+@model List<TblHakkimdaa>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yaratıcı Bootstrap Tablo</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f4f4f9;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .table-hover tbody tr:hover {
+            background-color: #5ae7eca6;
+            color: black;
+            transform: scale(1.02);
+            transition: 0.3s ease;
+        }
+
+        .table thead {
+            background-color: #5b11bc;
+            color: white;
+        }
+
+        .table {
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container mt-5">
+        <h2 class="text-center mb-4">Hakkımda Listesi</h2>
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Başlık</th>
+                    <th>Ad Soyad</th>
+                    <th>Yaş</th>
+                    <th>Dil</th>
+                    <th>Telefon</th>
+                    <th>Mail</th>
+                    <th>Adres</th>
+                    <th>Açıklama</th>
+                    <th>Sil</th>
+                    <th>Düzenle</th>
+                </tr>
+            </thead>
+            @foreach (var x in Model)
+            {
+                <tbody>
+                    <tr>
+                        <td>@x.ID</td>
+                        <td>@x.Baslik</td>
+                        <td>@x.AdSoyad</td>
+                        <td>@x.Yas</td>
+                        <td>@x.Dil</td>
+                        <td>@x.Telefon</td>
+                        <td>@x.Mail</td>
+                        <td>@x.Adres</td>
+                        <td>@x.Aciklama</td>
+                        <td><a href="/Hakkimda/HakkimdaSil/@x.ID" class="btn btn-danger"><i class="fas fa-trash"></i>Sil</a></td>
+                        <td><a href="/Hakkimda/HakkimdaGetir/@x.ID" class="btn btn-success"><i class="fas fa-pencil-alt"></i>Düzenle</a></td>
+                        @*<td><span class="badge badge-success">Sil</span></td>*@
+                    </tr>
+                </tbody>
+            }
+        </table>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
+
+

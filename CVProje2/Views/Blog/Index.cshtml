@@ -1,0 +1,108 @@
+﻿@using CVProje2.Models.entity
+@model List<TblBlog>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+@*<h2 style="margin-left:5px; margin-top:10px">Blog Listesi</h2>
+    <table class="table-light table-hover">
+        <tr class="table-dark" style="color:black">
+            <th>ID</th>
+            <th>Başlık</th>
+            <th>Kategori</th>
+            <th>Tarih</th>
+            <th>Resim</th>
+            <th>Açıklama</th>
+            <th>Sil</th>
+            <th>Düzenle</th>
+        </tr>
+        @foreach(var x in Model) {
+            <tr>
+                <td>@x.ID</td>
+                <td>@x.Baslik</td>
+                <td>@x.Kategori</td>
+                <td>@x.Tarih</td>
+                <td>@x.Resim</td>
+                <td>@x.Aciklama</td>
+                <td><a href="/Blog/BlogSil/@x.ID" class="btn btn-danger"><i class="fas fa-trash"></i>Sil</a></td>
+                <td><a href="/Blog/BlogGetir/@x.ID" class="btn btn-warning"><i class="fas fa-pencil-alt"></i>Düzenle</a></td>
+            </tr>
+        }
+    </table>
+    <a href="/Blog/BlogEkle" class="btn btn-outline-secondary" style="margin-left: 5px; margin-top: 10px">Yeni Blog Ekle</a>*@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f4f4f9;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .table-hover tbody tr:hover {
+            background-color: #71c458a9;
+            color: white;
+            transform: scale(1.02);
+            transition: 0.3s ease;
+        }
+
+        .table thead {
+            background-color: #bb1a49;
+            color: white;
+        }
+
+        .table {
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container mt-5">
+        <h2 class="text-center mb-4">Blog Listesi</h2>
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Başlık</th>
+                    <th>Kategori</th>
+                    <th>Tarih</th>
+                    <th>Resim</th>
+                    <th>Açıklama</th>
+                    <th>Sil</th>
+                    <th>Düzenle</th>
+                </tr>
+            </thead>
+            @foreach (var x in Model)
+            {
+                <tbody>
+                    <tr>
+                        <td>@x.ID</td>
+                        <td>@x.Baslik</td>
+                        <td>@x.Kategori</td>
+                        <td>@x.Tarih</td>
+                        <td>@x.Resim</td>
+                        <td>@x.Aciklama</td>
+                        <td><a href="/Blog/BlogSil/@x.ID" class="btn btn-danger"><i class="fas fa-trash"></i>Sil</a></td>
+                        <td><a href="/Blog/BlogGetir/@x.ID" class="btn btn-success"><i class="fas fa-pencil-alt"></i>Düzenle</a></td>
+                        @*<td><span class="badge badge-success">Sil</span></td>*@
+                    </tr>
+                </tbody>
+            }
+        </table>
+        <a href="/Blog/BlogEkle" class="btn btn-outline-secondary" style="margin-left: 5px; margin-top: 10px">Yeni Blog Ekle</a>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+

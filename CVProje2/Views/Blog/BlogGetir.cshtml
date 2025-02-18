@@ -1,0 +1,35 @@
+﻿@model CVProje2.Models.entity.TblBlog
+@{
+    ViewBag.Title = "BlogGetir";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<br />
+
+<h4 style="margin-left: 10px; margin-top: 10px; margin-bottom: 30px">Blog Bilgisi Güncelleme Sayfası</h4>
+<br />
+<br />
+<div class="container-fluid">
+    <form method="post">
+        @Html.Label("Blog ID")
+        @Html.TextBoxFor(x => x.ID, new { @class = "form-control" })
+        <br />
+        @Html.Label("Başlık")
+        @Html.TextBoxFor(x => x.Baslik, new { @class = "form-control" })
+        <br />
+        @Html.Label("Kategori")
+        @Html.TextBoxFor(x => x.Kategori, new { @class = "form-control" })
+        <br />
+        @Html.Label("Tarih")
+        @Html.TextBoxFor(x => x.Tarih, new { @class = "form-control" })
+        <br />
+        @Html.Label("Resim")
+        @Html.TextBoxFor(x => x.Resim, new { @class = "form-control" })
+        <br />
+        @Html.Label("Açıklama")
+        @Html.TextBoxFor(x => x.Aciklama, new { @class = "form-control" })
+        <br />
+        <button class="btn btn-outline-info">Güncelle</button>
+    </form>
+</div>
+

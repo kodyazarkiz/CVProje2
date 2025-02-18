@@ -1,0 +1,35 @@
+﻿@model CVProje2.Models.entity.TblEğitimDeneyim
+@{
+    ViewBag.Title = "DeneyimGetir";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<br />
+
+<h4 style="margin-left: 10px; margin-top: 10px; margin-bottom: 30px">Deneyim Güncelleme Sayfası</h4>
+<br />
+<br />
+<div class="container-fluid">
+    <form method="post">
+        @Html.Label("Deneyim ID")
+        @Html.TextBoxFor(x => x.ID, new { @class = "form-control" })
+        <br />
+        @Html.Label("Başlık")
+        @Html.TextBoxFor(x => x.DBaslik, new { @class = "form-control" })
+        <br />
+        @Html.Label("Pozisyon")
+        @Html.TextBoxFor(x => x.Pozisyon, new { @class = "form-control" })
+        <br />
+        @Html.Label("Tarih")
+        @Html.TextBoxFor(x => x.DTarih, new { @class = "form-control" })
+        <br />
+        @Html.Label("Proje Sayısı")
+        @Html.TextBoxFor(x => x.ProjeSayısı, new { @class = "form-control" })
+        <br />
+        @Html.Label("Açıklama")
+        @Html.TextAreaFor(x => x.DAciklama, new { @class = "form-control" })
+        <br />
+        <button class="btn btn-outline-info">Güncelle</button>
+    </form>
+</div>
+

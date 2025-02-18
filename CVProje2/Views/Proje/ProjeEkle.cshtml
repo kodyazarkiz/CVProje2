@@ -1,0 +1,28 @@
+﻿@model CVProje2.Models.entity.TblProjeler
+@{
+    ViewBag.Title = "ProjeEkle";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<br />
+
+<h4 style="margin-left: 10px; margin-top: 10px; margin-bottom: 30px">Yeni Proje Bilgisi Ekleme Sayfası</h4>
+<br />
+<br />
+<div class="container-fluid">
+    <form method="post">
+        @Html.Label("Resim")
+        @Html.TextBoxFor(x => x.Resim, new { @class = "form-control" })
+        @Html.ValidationMessageFor(x => x.Resim, "")
+        <br />
+        @Html.Label("Kategori")
+        @Html.TextBoxFor(x => x.Kategori, new { @class = "form-control" })
+        @Html.ValidationMessageFor(x => x.Kategori, "")
+        <br />
+        @Html.Label("Bağlantı")
+        @Html.TextBoxFor(x => x.Bağlantı, new { @class = "form-control" })
+        @Html.ValidationMessageFor(x => x.Bağlantı, "")
+        <br />
+        <button class="btn btn-outline-primary">Ekle</button>
+    </form>
+</div>

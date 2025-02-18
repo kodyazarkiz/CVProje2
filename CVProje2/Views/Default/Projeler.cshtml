@@ -1,0 +1,51 @@
+﻿@using CVProje2.Models.entity
+@model List<TblProjeler>
+<section class="ms-portfolio-section ms-slide portfolio padding-tb-80 body-bg">
+    <div class="container">
+        <div class="section-title p-b-30">
+            <h2>Yaptığım <span>Projeler</span></h2>
+            <span class="ligh-title">Projeler</span>
+        </div>
+
+        <div class="row m-b-minus-24px">
+            <div class="portfolio-content">
+                <div>
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="portfolio-tabs">
+                                <ul>
+                                    <li class="filter" data-filter="all">Tümü</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="col-md-12 col-sm-12">
+                            <div class="portfolio-content-items">
+                                <div class="row">
+                                    @foreach (var x in Model)
+                                    {
+                                        <div class="col-lg-4 col-md-6 col-xs-12 mix graphics templates">
+                                            <div class="hovereffect">
+                                                <div class="portfolio-img">
+                                                    <img src="@x.Resim" alt="graphics">
+                                                    <h3><span>@x.Kategori</span></h3>
+                                                </div>
+                                                <div class="overlay">
+                                                    <div class="overlay-info">
+                                                        <a class="info" href="@x.Bağlantı"><i class="fa fa-link" aria-hidden="true"></i></a>
+                                                        <a class="info" data-fancybox="gallery" href="@x.Resim"><i class="fa fa-search" aria-hidden="true"></i></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    }
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+

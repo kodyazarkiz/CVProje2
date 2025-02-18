@@ -1,0 +1,45 @@
+﻿@model CVProje2.Models.entity.TblHakkimdaa
+@{
+    ViewBag.Title = "HakkimdaGetir";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<br />
+
+<h4 style="margin-left: 10px; margin-top: 10px; margin-bottom: 30px" ">Hakkımda Güncelleme Sayfası</h4>
+<br />
+<br />
+<div class="container-fluid">
+    <form method="post">
+        @Html.Label("Hakkımda ID")
+        @Html.TextBoxFor(x => x.ID, new { @class = "form-control" })
+        <br />
+        @Html.Label("Başlık")
+        @Html.TextBoxFor(x => x.Baslik, new { @class = "form-control" })
+        <br />
+        @Html.Label("Açıklama")
+        @Html.TextAreaFor(x => x.Aciklama, new { @class = "form-control" })
+        <br />
+        @Html.Label("Ad Soyad")
+        @Html.TextBoxFor(x => x.AdSoyad, new { @class = "form-control" })
+        <br />
+        @Html.Label("Yaş")
+        @Html.TextBoxFor(x => x.Yas, new { @class = "form-control" })
+        <br />
+        @Html.Label("Dil")
+        @Html.TextBoxFor(x => x.Dil, new { @class = "form-control" })
+        <br />
+        @Html.Label("Telefon")
+        @Html.TextBoxFor(x => x.Telefon, new { @class = "form-control" })
+        <br />
+        @Html.Label("Mail")
+        @Html.TextBoxFor(x => x.Mail, new { @class = "form-control" })
+        <br />
+        @Html.Label("Adres")
+        @Html.TextBoxFor(x => x.Adres, new { @class = "form-control" })
+        <br />
+        <button class="btn btn-outline-warning" style="margin-left: 5px">Güncelle</button>
+    </form>
+</div>
+
+

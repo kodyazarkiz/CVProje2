@@ -1,0 +1,225 @@
+﻿@using CVProje2.Models.entity
+@model List<TblHakkimdaa>
+<section class="ms-about-section ms-slide padding-tb-80 body-bg">
+    <div class="container">
+        <div class="row">
+            <div class="section-title">
+                <h2>Ben  <span>Kimim?</span></h2>
+                <span class="ligh-title">Hakkımda</span>
+            </div>
+            @foreach (var x in Model)
+            {
+                <div class="col-lg-6">
+                    <div class="ms-about-detail">
+                        <h4>@x.Baslik</h4>
+                        <p class="ms-text">@x.Aciklama</p>
+                        <div class="ms-about-info">
+                            <ul class="m-r-30">
+                                <li><span class="title">Ad Soyad<b>:</b></span>@x.AdSoyad</li>
+                                <li><span class="title">Yaş<b>:</b></span>@x.Yas</li>
+                                <li><span class="title">Dil<b>:</b></span>@x.Dil</li>
+                                <li><span class="title">Telefon<b>:</b></span>@x.Telefon</li>
+                                <li><span class="title">Mail<b>:</b></span>@x.Mail</li>
+                                <li><span class="title">Adres<b>:</b></span><span>@x.Adres</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            }
+            <div class="col-lg-6">
+                <div class="ms-skill-progress">
+                    <h5>ASP.NET MVC</h5>
+                    <div class="progress" data-percent="80%">
+                        <div class="progress-done progress-done-php" role="progressbar">
+                            <span>80%</span>
+                        </div>
+                    </div>
+                    <h5>JAVASCRIPT</h5>
+                    <div class="progress" data-percent="70%">
+                        <div class="progress-done progress-done-js" role="progressbar">
+                            <span>70%</span>
+                        </div>
+                    </div>
+                    <h5>VERİ TABANI (SQL)</h5>
+                    <div class="progress" data-percent="85%">
+                        <div class="progress-done progress-done-html" role="progressbar">
+                            <span>85%</span>
+                        </div>
+                    </div>
+                    <h5>PYTHON</h5>
+                    <div class="progress" data-percent="85%">
+                        <div class="progress-done progress-done-css" role="progressbar">
+                            <span>85%</span>
+                        </div>
+                    </div>
+                    <h5>MOBİL UYGULAMA</h5>
+                    <div class="progress" data-percent="50%">
+                        <div class="progress-done progress-done-scss" role="progressbar">
+                            <span>50%</span>
+                        </div>
+                    </div>
+                    <h5>C#</h5>
+                    <div class="progress" data-percent="75%">
+                        <div class="progress-done progress-done-ps" role="progressbar">
+                            <span>75%</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row service-box p-t-80 m-tb-minus-12">
+            <div class="col-lg-3 col-md-6 col-xs-12">
+                <div class="flipper">
+                    <div class="main-box">
+                        <div class="box-front height-300 white-bg">
+                            <div class="content-wrap">
+                                <h3>Grafik Tasarım</h3>
+                                <p>İşletmenizin Görsel Kimliğini Geliştirin</p>
+                            </div>
+                        </div>
+                        <div class="box-back height-300 gradient-bg">
+                            <div class="content-wrap">
+                                <h3>Grafik Tasarım</h3>
+                                <p>İşletmenizin Görsel Kimliğini Geliştirin</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-xs-12">
+                <div class="flipper">
+                    <div class="main-box">
+                        <div class="box-front height-300 white-bg">
+                            <div class="content-wrap">
+                                <h3>Web Tasarımı</h3>
+                                <p>Sadece İşletmenizle Değil, Kullanıcılarınızla Bağlantı Kurun.</p>
+                            </div>
+                        </div>
+                        <div class="box-back height-300 gradient-bg">
+                            <div class="content-wrap">
+                                <h3>Web Tasarımı</h3>
+                                <p>Sadece İşletmenizle Değil, Kullanıcılarınızla Bağlantı Kurun.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-xs-12">
+                <div class="flipper">
+                    <div class="main-box">
+                        <div class="box-front height-300 white-bg">
+                            <div class="content-wrap">
+                                <h3>Gelişim</h3>
+                                <p>İşletmenizin Görsel Kimliğini Geliştiriyoruz.</p>
+                            </div>
+                        </div>
+                        <div class="box-back height-300 gradient-bg">
+                            <div class="content-wrap">
+                                <h3>Gelişim</h3>
+                                <p>İşletmenizin Görsel Kimliğini Geliştiriyoruz.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-xs-12">
+                <div class="flipper">
+                    <div class="main-box">
+                        <div class="box-front height-300 white-bg">
+                            <div class="content-wrap">
+                                <h3>Seo Dostu</h3>
+                                <p>Sitenizi Google sıralamasında üst sıralara taşımak.</p>
+                            </div>
+                        </div>
+                        <div class="box-back height-300 gradient-bg">
+                            <div class="content-wrap">
+                                <h3>Seo Dostu</h3>
+                                <p>Sitenizi Google sıralamasında üst sıralara taşımak.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Service Block start -->
+        @*<div class="row service-box p-t-80 m-tb-minus-12">
+            <div class="col-lg-3 col-md-6 col-xs-12">
+                <div class="flipper">
+                    <div class="main-box">
+                        <div class="box-front height-300 white-bg">
+                            <div class="content-wrap">
+                                <h3>Grafik Tasarım</h3>
+                                <p>
+                                    İşletmenizin Görsel Kimliğini Geliştirin
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-xs-12">
+                <div class="flipper">
+                    <div class="main-box">
+                        <div class="box-front height-300 white-bg">
+                            <div class="content-wrap">
+                                <h3>Web Tasarımı</h3>
+                                <p>Sadece İşletmenizle Değil, Kullanıcılarınızla Bağlantı Kurun.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="main-box">
+                        <div class="box-front height-300 white-bg">
+                            <div class="content-wrap">
+                                <h3>Web Tasarımı</h3>
+                                <p>Sadece İşletmenizle Değil, Kullanıcılarınızla Bağlantı Kurun.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-xs-12">
+                <div class="flipper">
+                    <div class="main-box">
+                        <div class="box-front height-300 white-bg">
+                            <div class="content-wrap">
+                                <h3>Gelişim</h3>
+                                <p>İşletmenizin Görsel Kimliğini Geliştiriyoruz.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="main-box">
+                        <div class="box-front height-300 white-bg">
+                            <div class="content-wrap">
+                                <h3>Gelişim</h3>
+                                <p>İşletmenizin Görsel Kimliğini Geliştiriyoruz.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-xs-12">
+                <div class="flipper">
+                    <div class="main-box">
+                        <div class="box-front height-300 white-bg">
+                            <div class="content-wrap">
+                                <h3>Seo Dostu</h3>
+                                <p>Sitenizi Google sıralamasında üst sıralara taşımak.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="main-box">
+                        <div class="box-front height-300 white-bg">
+                            <div class="content-wrap">
+                                <h3>Seo Dostu</h3>
+                                <p>Sitenizi Google sıralamasında üst sıralara taşımak.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>*@
+    </div>
+</section>
+

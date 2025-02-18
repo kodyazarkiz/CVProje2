@@ -1,0 +1,128 @@
+﻿@using CVProje2.Models.entity
+@model List<TblSosyalMedya>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+@*<table class="table table-striped table-hover">
+        <thead>
+            <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Ad</th>
+                <th scope="col">Durum</th>
+                <th scope="col">Sil</th>
+                <th scope="col">Düzenle</th>
+            </tr>
+        </thead>
+        @foreach (var x in Model)
+        {
+            <tbody>
+                <tr>
+                    <th>@x.ID</th>
+                    <td>@x.Ad</td>
+                    <td>@x.Durum</td>
+                    <td>
+                        <a href="/SosyalMedya/Sil/@x.ID" class="btn btn-danger"><i class="fas fa-trash-alt"></i></a>
+                    </td>
+                    <td>
+                        <a href="/SosyalMedya/Düzenle/@x.ID" class="btn btn-info"><i class="fas fa-pencil-alt"></i>Düzenle</a>
+                    </td>
+                </tr>
+            </tbody>
+        }
+    </table>
+    <button class="btn btn-success" style="margin-left: 5px; margin-top: 10px" data-toggle="modal" data-target="#Modal1">Yeni Sosyal Medya Hesabı Ekleme</button>*@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f4f4f9;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .table-hover tbody tr:hover {
+            background-color: #4a1d03ad;
+            color: white;
+            transform: scale(1.02);
+            transition: 0.3s ease;
+        }
+
+        .table thead {
+            background-color: #c60b2b;
+            color: white;
+        }
+
+        .table {
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container mt-5">
+        <h2 class="text-center mb-4">Sosyal Medya Listesi</h2>
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Ad</th>
+                    <th>Durum</th>
+                    <th>Sil</th>
+                    <th>Düzenle</th>
+                </tr>
+            </thead>
+            @foreach (var x in Model)
+            {
+                <tbody>
+                    <tr>
+                        <td>@x.ID</td>
+                        <td>@x.Ad</td>
+                        <td><span class="badge badge-success">@x.Durum</span></td>
+                        <td><a href="/SosyalMedya/Sil/@x.ID" class="btn btn-danger"><i class="fas fa-trash"></i>Sil</a></td>
+                        <td><a href="/SosyalMedya/Düzenle/@x.ID" class="btn btn-success"><i class="fas fa-pencil-alt"></i>Düzenle</a></td>
+                    </tr>
+                </tbody>
+            }
+        </table>
+        <button class="btn btn-primary" style="margin-left: 5px; margin-top: 10px" data-toggle="modal" data-target="#Modal1">Yeni Sosyal Medya Hesabı Ekleme</button>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
+<div class="modal" id="Modal1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title">Yeni Sosyal Medya Ekleme Paneli</h2>
+            </div>
+            <form method="post" action="/SosyalMedya/Ekle">
+                <div class="modal-body">
+                    <label>Sosyal Medya İsmi</label>
+                    <input type="text" name="Ad" class="form-control" />
+                    <br />
+                    <label>Sosyal Medya Durumu</label>
+                    <input type="text" name="Durum" class="form-control" />
+                    <br />
+                    <label>Sosyal Medya Linki</label>
+                    <input type="text" name="Link" class="form-control" />
+                    <br />
+                    <label>İkon Değeri</label>
+                    <input type="text" name="İkon" class="form-control" />
+                    <br />
+                    <button class="btn btn-outline-dark">Ekle</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

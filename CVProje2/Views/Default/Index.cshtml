@@ -1,0 +1,113 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+
+    <title>Hatice Sarı CV - Özgeçmiş</title>
+    <meta name="keywords" content="personal portfolio, cv, resume, agency, bootstrap, clean, cv, designer, developer, freelancer, modern, one page portfolio, onepage, personal portfolio, responsive, resume, vcard" />
+    <meta name="description" content="Best personal portfolio modern html template.">
+    <meta name="author" content="ashishmaraviya">
+
+    <!-- site Favicon -->
+    <link rel="icon" href="~/demo-1/assets/img/favicon/favicon.png" sizes="32x32" />
+
+    <!-- css All Plugins Files -->
+    <link rel="stylesheet" href="~/demo-1/assets/css/plugins/animate.css" />
+    <link rel="stylesheet" href="~/demo-1/assets/css/plugins/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="~/demo-1/assets/css/plugins/bootstrap.css" />
+    <link rel="stylesheet" href="~/demo-1/assets/css/plugins/jquery.fancybox.min.css" />
+
+    <!-- Main Style -->
+    <link rel="stylesheet" id="main_style" href="~/demo-1/assets/css/style.css" />
+    <link rel="stylesheet" href="~/demo-1/assets/css/responsive.css" />
+    <link rel="stylesheet" class="dark-mode" href="~/demo-1/assets/css/dark.css">
+</head>
+
+<body class="body-bg">
+
+    <!-- On change section animation -->
+    <div id="overlay_shine"></div>
+
+    <!-- Loader -->
+    <div id="ms-overlay">
+        <div class="ms-roller">
+            <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+        </div>
+    </div>
+
+    <!-- Header navigation section -->
+    <header>
+        <div class="sidebar-title">
+            <h5>Menü</h5>
+            <a href="javascript:void(0)" class="nav-close"><i class="fa fa-times" aria-hidden="true"></i></a>
+        </div>
+        <nav class="ms-navigation">
+            <div>
+                <ul>
+                    <li><a href="javascript:void(0)" class="navs-link nav-home" data-section="ms-home"><i class="fa fa-home"></i><span>Anasayfa</span></a><span class="noty"><span>Anasayfa</span></span></li>
+                    <li><a href="javascript:void(0)" class="navs-link nav-about" data-section="ms-about-section"><i class="fa fa-user"></i><span>Hakkımda</span></a><span class="noty"><span>Hakkımda</span></span></li>
+                    <li><a href="javascript:void(0)" class="navs-link nav-experience" data-section="ms-experience-section"><i class="fa fa-briefcase"></i><span>Deneyimler</span></a><span class="noty"><span>Deneyimler</span></span></li>
+                    <li><a href="javascript:void(0)" class="navs-link nav-portfolio" data-section="ms-portfolio-section"><i class="fas fa-folder-open"></i><span>Projelerim</span></a><span class="noty"><span>Projelerim</span></span></li>
+                    <li><a href="javascript:void(0)" class="navs-link nav-news" data-section="ms-news-section"><i class="fas fa-newspaper"></i><span>Blog</span></a><span class="noty"><span>Blog</span></span></li>
+                    <li><a href="javascript:void(0)" class="navs-link nav-contact" data-section="ms-contact-section"><i class="fa fa-envelope"></i><span>İletişim</span></a><span class="noty"><span>İletişim</span></span></li>
+                    <li>
+                        <a href="/Login/Index" class="navs-link nav-Login" data-section="ms-Login-section">
+                            <i class="fa fa-sign-in"></i>
+                            <span>Admin Giriş</span>
+                        </a>
+                        <span class="noty"><span>Admin Giriş</span></span>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        @Html.Action("SosyalMedya")
+    </header>
+    <div class="header-overlay"></div>
+    <a href="javascript:void(0)" class="nav-toggle"><i class="fa fa-bars" aria-hidden="true"></i></a>
+    <!-- End Header navigation section -->
+    <!-- Home section -->
+    @Html.Action("Anasayfa")
+    <!-- Home section End -->
+    <!-- About section -->
+    @Html.Action("Hakkimda")
+    <!-- About section End -->
+    <!-- Start Experience & Education section -->
+    @Html.Action("EgitimDeneyim")
+    <!-- End Experience & Education Section -->
+    <!-- Start Portfolio Section -->
+    @Html.Action("Projeler")
+    <!-- End Portfolio Section -->
+    <!-- Start News Section -->
+    @Html.Action("Blog")
+    <!-- End News Section -->
+    <!-- Start Contact Section -->
+    @Html.Action("İletisim")
+    <!-- End Contact Section -->
+    <!-- Theme Custom Cursors -->
+    <div class="ms-cursor"></div>
+    <div class="ms-cursor-2"></div>
+
+    <!-- Plugins JS -->
+    <script src="~/demo-1/assets/js/plugins/jquery-3.5.1.min.js"></script>
+    <script src="~/demo-1/assets/js/plugins/bootstrap.bundle.min.js"></script>
+    <script src="~/demo-1/assets/js/plugins/jquery.fancybox.min.js"></script>
+    <script src="~/demo-1/assets/js/plugins/mixitup.min.js"></script>
+    <script src="~/demo-1/assets/js/plugins/fontawesome.js"></script>
+    <script src="~/demo-1/assets/js/plugins/tilt.jquery.js"></script>
+    <!-- theme particles script -->
+    <script src="~/demo-1/assets/js/plugins/particles.min.js"></script>
+    <script src="~/demo-1/assets/js/plugins/app.js"></script>
+    <!-- Main Js -->
+    <script src="~/demo-1/assets/js/ms-tools.js"></script>
+    <script src="~/demo-1/assets/js/main.js"></script>
+</body>
+
+</html>

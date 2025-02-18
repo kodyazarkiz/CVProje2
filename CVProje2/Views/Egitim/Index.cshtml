@@ -1,0 +1,106 @@
+﻿@using CVProje2.Models.entity
+@model List<TblEğitimDeneyim>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+@*<h2 style="margin-left:5px; margin-top:10px">Eğitim Listesi</h2>
+    <table class="table-light table-hover">
+        <tr class="table-dark" style="color:black">
+            <th>ID</th>
+            <th>Başlık</th>
+            <th>Açıklama</th>
+            <th>Tarih</th>
+            <th>GNO</th>
+            <th>Sil</th>
+            <th>Düzenle</th>
+        </tr>
+        @foreach (var x in Model)
+        {
+            <tr>
+                <td>@x.ID</td>
+                <td>@x.EBaslik</td>
+                <td>@x.EAciklama</td>
+                <td>@x.ETarih</td>
+                <td>@x.GNO</td>
+                <td><a href="/Egitim/EgitimSil/@x.ID" class="btn btn-warning"><i class="fas fa-trash"></i>Sil</a></td>
+                <td><a href="/Egitim/EgitimGetir/@x.ID" class="btn btn-primary"><i class="fas fa-pencil-alt"></i>Düzenle</a></td>
+            </tr>
+        }
+    </table>
+    <a href="/Egitim/EgitimEkle" class="btn btn-outline-danger" style="margin-left: 5px; margin-top: 10px">Yeni Eğitim Bilgisi Ekle</a>*@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f4f4f9;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .table-hover tbody tr:hover {
+            background-color: #435fe0b2;
+            color: white;
+            transform: scale(1.02);
+            transition: 0.3s ease;
+        }
+
+        .table thead {
+            background-color: #ff0000;
+            color: white;
+        }
+
+        .table {
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container mt-5">
+        <h2 class="text-center mb-4">Eğitim Listesi</h2>
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Başlık</th>
+                    <th>Tarih</th>
+                    <th>GNO</th>
+                    <th>Açıklama</th>
+                    <th>Sil</th>
+                    <th>Düzenle</th>
+                </tr>
+            </thead>
+            @foreach (var x in Model)
+            {
+                <tbody>
+                    <tr>
+                        <td>@x.ID</td>
+                        <td>@x.EBaslik</td>
+                        <td>@x.ETarih</td>
+                        <td>@x.GNO</td>
+                        <td>@x.EAciklama</td>
+                        <td><a href="/Egitim/EgitimSil/@x.ID" class="btn btn-danger"><i class="fas fa-trash"></i>Sil</a></td>
+                        <td><a href="/Egitim/EgitimGetir/@x.ID" class="btn btn-success"><i class="fas fa-pencil-alt"></i>Düzenle</a></td>
+                        @*<td><span class="badge badge-success">Sil</span></td>*@
+                    </tr>
+                </tbody>
+            }
+        </table>
+        <a href="/Egitim/EgitimEkle" class="btn btn-outline-secondary" style="margin-left: 5px; margin-top: 10px">Yeni Eğitim Bilgisi Ekle</a>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
+

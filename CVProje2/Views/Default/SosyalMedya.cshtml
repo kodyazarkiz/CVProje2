@@ -1,0 +1,8 @@
+﻿@using CVProje2.Models.entity
+@model List<TblSosyalMedya>
+
+<ul class="ms-social">
+    @foreach(var x in Model) {
+    <li><a href="@x.Link" target="_blank"><i class="@x.İkon" aria-hidden="true"></i></a></li>
+    }
+</ul>

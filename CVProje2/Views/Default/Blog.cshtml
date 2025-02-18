@@ -1,0 +1,31 @@
+﻿@using CVProje2.Models.entity
+@model List<TblBlog>
+
+<section class="ms-news-section ms-slide padding-tb-80 body-bg">
+    <div class="container">
+        <div class="section-title">
+            <h2>Benim <span>Blogum</span></h2>
+            <span class="ligh-title">Blog</span>
+        </div>
+        <div class="row m-b-minus-24px">
+            @foreach (var x in Model)
+            {
+                <div class="col-lg-4 col-md-6">
+                    <div class="news-info">
+                        <figure class="news-img">
+                            <a href="https://onerblog.com.tr/Blog/Index"><img src="@x.Resim" alt="news imag"></a>
+                        </figure>
+                        <div class="detail">
+                            <label>@x.Tarih - <a href="#">@x.Kategori</a></label>
+                            <h3><a href="#">@x.Baslik</a></h3>
+                            <p class="text-length">@x.Aciklama</p>
+                            <div class="more-info">
+                                <a href="https://onerblog.com.tr/Blog/Index">Devamını Oku...<span></span></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</section>
